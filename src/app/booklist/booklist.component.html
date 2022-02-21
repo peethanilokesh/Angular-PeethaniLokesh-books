@@ -1,0 +1,24 @@
+<h1>Books List</h1>
+<table class="table table-stripped" >
+    <thead>
+        <tr>
+            <td>bookId</td>
+            <td>bookName</td>
+            <td>description</td>
+            <td>amount</td>
+            <td>author</td>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container   >
+            <tr *ngFor="let book of books" >
+                <td>{{book.bookId}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.description}}</td> 
+                <td>{{book.amount}}</td>
+                <td>{{book.author}}</td>          
+            </tr>
+        </ng-container>
+       
+    </tbody>
+</table>
