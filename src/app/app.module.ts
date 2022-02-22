@@ -7,14 +7,19 @@ import { HomeComponent } from './home/home.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { TokenInterceptorService } from './Interceptor/Tokeninterceptor.service';
+import { AddbookComponent } from './components/addbook/addbook.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BooklistComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    AuthenticationComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,13 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptorService,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

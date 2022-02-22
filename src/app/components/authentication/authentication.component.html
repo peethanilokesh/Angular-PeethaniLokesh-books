@@ -1,0 +1,14 @@
+<form #loginform="ngForm" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label for="userName" class="form-label">UserName</label>
+      <input type="text" class="form-control" name="userName" id="userName" [(ngModel)]="loginDetails.UserName" #username="ngModel" required>
+      <p class="alert alert-danger" *ngIf="username.invalid && username.touched">username is mandatory</p>     
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" id="password" [(ngModel)]="loginDetails.Password" #password="ngModel" required >
+      <p *ngIf="password.invalid && password.touched" class="alert alert-danger">password is mandatory</p>
+    </div>
+    
+    <button type="submit" [disabled]="loginform.invalid" class="btn btn-primary">Submit</button>
+  </form>

@@ -1,9 +1,15 @@
-<ul class="nav">
+<ul class="nav" *ngIf="isNav()">
   <li class="nav-item">
     <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" [routerLink]="['/list']" routerLinkActive="router-link-active" >List</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/add']" routerLinkActive="router-link-active" >AddBook</a>
+  </li>
+  <li>
+    <button class="btn btn-primary" (click)="logout()">Logout</button>
   </li>
 </ul>
 <router-outlet></router-outlet>

@@ -1,5 +1,4 @@
-export interface Ibook{
-    bookId:number,
+export interface IAddBook{
     bookName:string,
     description:string,
     amount:number,
