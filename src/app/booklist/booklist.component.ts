@@ -15,6 +15,7 @@ export class BooklistComponent implements OnInit {
   constructor(private _bookService:BookService,private sharedservice:SharedService) {
        
   }
+
   passData(book:Ibook){
       this.sharedservice.sharedData=book;
   }
