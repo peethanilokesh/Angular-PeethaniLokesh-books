@@ -16,7 +16,10 @@
                 <td>{{book.bookName}}</td>
                 <td>{{book.description}}</td> 
                 <td>{{book.amount}}</td>
-                <td>{{book.author}}</td>          
+                <td>{{book.author}}</td>  
+                <td>
+                    <a class="nav-link" (click)="passData(book)" [routerLink]="['/edit']" routerLinkActive="router-link-active" >EditBook</a>
+                </td>        
             </tr>
         </ng-container>
        

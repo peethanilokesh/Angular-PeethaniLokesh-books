@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooklistComponent } from './booklist/booklist.component';
 import { AddbookComponent } from './components/addbook/addbook.component';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AddbookService } from './services/addbook.service';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'list',component:BooklistComponent},
   {path:'login',component:AuthenticationComponent},
   {path:'add',component:AddbookComponent},
+  {path:'edit',component:EditBookComponent},
   {path:'',redirectTo:'/login', pathMatch:'full' },
   {path:'**',component:PagenotfoundComponent}
 ];

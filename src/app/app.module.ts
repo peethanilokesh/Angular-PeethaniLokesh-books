@@ -11,6 +11,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthenticationComponent } from './components/authentication/authentication.component';
 import { TokenInterceptorService } from './Interceptor/Tokeninterceptor.service';
 import { AddbookComponent } from './components/addbook/addbook.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { AddbookComponent } from './components/addbook/addbook.component';
     BooklistComponent,
     PagenotfoundComponent,
     AuthenticationComponent,
-    AddbookComponent
+    AddbookComponent,
+    RegistrationComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
